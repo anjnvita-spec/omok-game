@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>오목</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="app">
+  <h1>오목</h1>
+
+  <!-- 모드 선택 화면 -->
+  <section id="screen-mode" class="screen">
+    <h2>모드를 선택하세요</h2>
+    <div class="menu-buttons">
+      <button id="btn-pvp" class="menu-btn">사람 대 사람</button>
+      <button id="btn-pvai" class="menu-btn">사람 대 AI</button>
+    </div>
+  </section>
+
+  <!-- 난이도 선택 화면 -->
+  <section id="screen-difficulty" class="screen hidden">
+    <h2>AI 난이도를 선택하세요</h2>
+    <div class="menu-buttons difficulty-buttons">
+      <button class="menu-btn" data-level="1">1단계 (쉬움)</button>
+      <button class="menu-btn" data-level="2">2단계</button>
+      <button class="menu-btn" data-level="3">3단계</button>
+      <button class="menu-btn" data-level="4">4단계</button>
+      <button class="menu-btn" data-level="5">5단계 (어려움)</button>
+    </div>
+    <button id="btn-back-to-mode" class="link-btn">&larr; 모드 다시 선택</button>
+  </section>
+
+  <!-- 게임 화면 -->
+  <section id="screen-game" class="screen hidden">
+    <div class="status-bar">
+      <span id="status-text">흑돌 차례입니다</span>
+    </div>
+    <div id="board" class="board"></div>
+    <div class="controls">
+      <button id="btn-restart" class="menu-btn small">다시하기</button>
+      <button id="btn-change-mode" class="link-btn">모드 변경</button>
+    </div>
+  </section>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
